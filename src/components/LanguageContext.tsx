@@ -28,7 +28,9 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
 
   return (
     <LanguageContext.Provider value={{ lang, toggleLanguage, t }}>
-      {children}
+      <div key={lang} className="animate-language-fade-in w-full h-full min-h-screen">
+        {children}
+      </div>
     </LanguageContext.Provider>
   );
 }
